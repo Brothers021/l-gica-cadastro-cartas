@@ -12,7 +12,7 @@ char codigopostal1[10];
 int populacao1;
 float area1;
 float pib1;
-int pontos_turisticos1;
+int pontosturisticos1;
 
 // Segunda cidade
 
@@ -21,11 +21,32 @@ char codigopostal2[10];
 int populacao2;
 float area2;
 float pib2;
-int pontos_turisticos2;
+int pontosturisticos2;
 
   // Área para entrada de dados
+  printf("=== cadastro da primeira cidade ===\n");
+  printf("Nome da cidade: ");
+  scanf("%49s", cidade1);
+
+  printf("Código postal:");
+  scanf("%9s", codigopostal1);
+
+  printf("População: ");
+  scanf("%d", &populacao1);
+
+  printf("Área (em km²): ");
+  scanf("%f", &area1);
+
+  printf("PIB (em Milhões):");
+  scanf("%f", &pib1); 
+
+  printf("Número de pontos turísticos: ");
+  scanf("%d", &pontosturisticos1);
+
+
 
   // Área para exibição dos dados da cidade
+  
 
 return 0;
 } 
