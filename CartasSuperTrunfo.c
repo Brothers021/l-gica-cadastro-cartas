@@ -13,6 +13,16 @@ int populacao1;
 float area1;
 float pib1;
 int pontos_turisticos1;
+
+// Segunda cidade
+
+char cidade2[50];
+char codigopostal2[10];
+int populacao2;
+float area2;
+float pib2;
+int pontos_turisticos2;
+
   // Área para entrada de dados
 
   // Área para exibição dos dados da cidade
