@@ -77,5 +77,7 @@ printf("Número de pontos turísticos: %d\n", pontosturisticos1);
 
  // Área para exibição dos dados da cidade 2
 
+ 
+
 return 0;
 } 
