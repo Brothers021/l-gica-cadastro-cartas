@@ -26,7 +26,7 @@ int pontosturisticos2;
   // Área para entrada de dados
   printf("=== cadastro da primeira cidade ===\n");
   printf("Nome da cidade: ");
-  scanf("%49s", cidade1);
+  scanf("%49s", cidade1); // Salvador 
 
   printf("Código postal:");
   scanf("%9s", codigopostal1);
@@ -47,7 +47,7 @@ int pontosturisticos2;
 
   printf("\n=== cadastro da segunda cidade ===\n");
   printf("Nome da cidade: ");
-  scanf("%49s",cidade2); 
+  scanf("%49s",cidade2);  // Vitoria
 
   printf("código postal: ");
   scanf("%9s", codigopostal2);
@@ -82,9 +82,10 @@ printf("Número de pontos turísticos: %d\n", pontosturisticos1);
  printf("Código postal: %s\n", codigopostal2);
  printf("População: %d\n", populacao2);
  printf("Área (em km²): %.2f\n", area2);
- print("PIB (em milhões): %.2f\n", pib2);
+ printf("PIB (em milhões): %.2f\n", pib2);
  printf("Número de pontos tuísticos: %d\n", pontosturisticos2); 
- 
 
+
+ 
 return 0;
 } 
