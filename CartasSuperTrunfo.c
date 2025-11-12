@@ -77,6 +77,13 @@ printf("Número de pontos turísticos: %d\n", pontosturisticos1);
 
  // Área para exibição dos dados da cidade 2
 
+ printf("\n=== carta da segunda cidade ===\n");
+ printf("Cidade: %s\n", cidade2);
+ printf("Código postal: %s\n", codigopostal2);
+ printf("População: %d\n", populacao2);
+ printf("Área (em km²): %.2f\n", area2);
+ print("PIB (em milhões): %.2f\n", pib2);
+ printf("Número de pontos tuísticos: %d\n", pontosturisticos2); 
  
 
 return 0;
