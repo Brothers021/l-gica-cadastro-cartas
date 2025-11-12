@@ -43,6 +43,27 @@ int pontosturisticos2;
   printf("Número de pontos turísticos: ");
   scanf("%d", &pontosturisticos1);
 
+  // Entarda das segundas cidades
+
+  printf("\n=== cadastro da segunda cidade ===\n");
+  printf("Nome da cidade: ");
+  scanf("%49s",)cidade2); 
+
+  printf"(código postal: ");
+  scanf("%9s", codigopostal2);
+
+  printf("População: ");
+  scanf("%d", &populacao2);
+
+  printf("Área (em km²): ");
+  scanf("%f", &area2);
+
+  printf("PIB (em Milhões): ");
+  scanf("%f", &pib2);
+
+  printf("Númeo de pontos turisticos:");
+  scanf("%d", &pontosturisticos2);  
+
 
 
   // Área para exibição dos dados da cidade
