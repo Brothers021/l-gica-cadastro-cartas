@@ -7,26 +7,30 @@
 int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
 // primeira cidade
-char cidade1[50];
-char codigopostal1[10];
-int populacao1;
-float area1;
-float pib1;
-int pontosturisticos1;
+char cidade1[50]; // Salvador
+char codigopostal1[10]; // 40000-000
+int populacao1; // 2.57 milhões 
+float area1; // 693,442 km²
+float pib1; // 62.954 bilhões
+int pontosturisticos1; //14
+float densidadepopulacional1; // 3.486,96 habitantes por km²
+float PIBpercapita1; // 21.706,06
 
 // Segunda cidade
 
-char cidade2[50];
-char codigopostal2[10];
-int populacao2;
-float area2;
-float pib2;
-int pontosturisticos2;
+char cidade2[50]; // Fortaleza
+char codigopostal2[10]; // 29000-000
+int populacao2; // 2.57 milhões
+float area2; //312,353 km²
+float pib2; //73,4 bilhões
+int pontosturisticos2; //10
+float densidadepopulacional2; // 7.775,52 habitantes por km²
+float PIBpercapita2; // 27.164,45
 
   // Área para entrada de dados
   printf("=== cadastro da primeira cidade ===\n");
   printf("Nome da cidade: ");
-  scanf("%49s", cidade1); // Salvador 
+  scanf("%49s", cidade1); 
 
   printf("Código postal:");
   scanf("%9s", codigopostal1);
@@ -37,11 +41,17 @@ int pontosturisticos2;
   printf("Área (em km²): ");
   scanf("%f", &area1);
 
-  printf("PIB (em Milhões):");
+  printf("PIB (em bilhões):");
   scanf("%f", &pib1); 
 
   printf("Número de pontos turísticos: ");
   scanf("%d", &pontosturisticos1);
+
+  printf("densidadepopulacional1: ");
+  scanf("%f", &densidadepopulacional1);
+
+  printf("PIBpercapita1: ");
+  scanf("%f", &PIBpercapita1);
 
   // Entarda das segundas cidades
 
@@ -58,11 +68,17 @@ int pontosturisticos2;
   printf("Área (em km²): ");
   scanf("%f", &area2);
 
-  printf("PIB (em Milhões): ");
+  printf("PIB (em Bilhões): ");
   scanf("%f", &pib2);
 
   printf("Númeo de pontos turisticos:");
   scanf("%d", &pontosturisticos2);  
+
+  printf("densidadepopulacional2: ");
+  scanf("%f", &densidadepopulacional2);
+
+  printf("PIBpercapita2: ");
+  scanf("%f", &PIBpercapita2);
 
 
   // Área para exibição dos dados da cidade 1
