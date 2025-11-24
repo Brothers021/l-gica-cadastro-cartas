@@ -97,7 +97,8 @@ float superpoder1, superpoder2;
 
   superpoder1 = (float)populacao1 + pib1 + pontosturisticos1 + pibpercapita1 + ( 1.0 / densidadepopulacional1);
   superpoder2 = (float)populacao2 + pib2 + pontosturisticos2 + pibpercapita2 + ( 1.0 / densidadepopulacional2);
-  // Área para exibição dos dados da cidade 1
+
+ // Área para exibição dos dados da cidade 1
   
 printf("\n=== carta da primeira cidade ===\n");
 printf("Estado: %s\n", Estado1);
@@ -131,5 +132,22 @@ printf("pib per capita1: %.2f\n", pibpercapita1);
 printf("Densidade populacional: carta 2 venceu (%d)\n", densidadepopulacional1 < densidadepopulacional2);
 printf("PIB per capita: carta 2 venceu (%d)\n", pibpercapita1 < pibpercapita2);
 printf("Super poder: carta 1 venceu (%d)\n", superpoder1 > superpoder2);
+
+printf("---Comparação de cartas (Atributo: POPULAÇÃO)---\n\n");
+
+// Aqui é para exibir os valores das cartas 
+
+printf("Carta 1 - %s (%s): %lu\n", cidade1, Estado1, populacao1);
+printf("Carta 2 - %s (%s): %lu\n", cidade2, Estado2, populacao2);
+
+// Aqui mostra quem ganhou 
+
+if(populacao1 > populacao2) {
+  printf("Resultado: Carta 1 (%s) Venceu!\n", cidade1);
+} else if(populacao2 > populacao1) {
+  printf("Resultado: Carta 2 (%s) Venceu!\n", cidade2);
+} else {
+  printf("Resultado: Empate!\n");
+}
 return 0;
 } 
