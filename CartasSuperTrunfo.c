@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main() {
   // Primeira cidade
@@ -59,8 +61,31 @@ int main() {
   printf("Pontos turísticos: %d\nDensidade populacional: %.2f\nPIB per capita: %.2f\n", 
          pontosturisticos2, densidadepopulacional2, pibpercapita2);
 
+// menu interativo para escolha dos atributos
+         int opcao1, opcao2;
+         printf("\n=== Escolha o primeiro atributo.===\n");
+         printf("1 - População\n2 - Área\n3 - PIB\n4 - PIB per capita\n5 - Pontos turísticos\n6 - Super poder\n7 - Densidade populacional\n");
+         scanf("%d", &opcao1);
+
+// Segundo menu dinâmico
+         printf("\n=== Escolha o segundo atributo. ===\n");
+         for(int num = 1; num <=7; num++) {
+           if (num != opcao1) {
+             switch (num) {
+            case 1: printf("1. - População\n"); break; 
+            case 2: printf("2. Área\n"); break;
+            case 3: printf("3. PIB\n"); break;
+            case 4: printf("4. PIB per capita"); break;
+            case 5: printf("");
+            case 6: printf("");
+            case 7: printf("");
+              }
+           }
+        }
+
          // menu interativo
          int opcao;
+         printf("\n@@@ Bem Vindo ao Jogo @@@\n");
   printf("\n### Menu de Comparação ###\n");
   printf("1 - População\n");
   printf("2 - Área\n");
