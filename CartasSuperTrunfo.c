@@ -73,14 +73,82 @@ int main() {
            if (num != opcao1) {
              switch (num) {
             case 1: printf("1. - População\n"); break; 
-            case 2: printf("2. Área\n"); break;
-            case 3: printf("3. PIB\n"); break;
-            case 4: printf("4. PIB per capita"); break;
-            case 5: printf("");
-            case 6: printf("");
-            case 7: printf("");
+            case 2: printf("2. - Área\n"); break;
+            case 3: printf("3. - PIB\n"); break;
+            case 4: printf("4. - PIB per capita\n"); break;
+            case 5: printf("5. - Pontos turísticos\n"); break;
+            case 6: printf("6. - Super poder\n"); break;
+            case 7: printf("7. - Densidade populacional\n"); break;
               }
            }
+        }
+        scanf("%d", &opcao2);
+
+        if (opcao1 == opcao2)
+        {
+          printf("Você não pode escolher o mesmo atributo duas vezes!\n");
+          return 0;
+        }
+       const char *nomeatribuidos[] = {
+          "População", "Área", "PIB", "PIB per capita", "Pontos turisticos", "Super poder", "Densidade populacional"
+        };
+
+        float valor1_atribuido1, valor2_atribuido1;
+        float valor1_atribuido2, valor2_atribuido2;
+       
+        
+ // Primeiro atributo
+       switch (opcao1) {
+          case 1: valor1_atribuido1 = populacao1; valor2_atribuido1 = populacao2; break;
+          case 2: valor1_atribuido1 = area1; valor2_atribuido1 = area2; break;
+          case 3: valor1_atribuido1 = pib1; valor2_atribuido1 = pib2; break;
+          case 4: valor1_atribuido1 = pibpercapita1; valor2_atribuido1 = pibpercapita2; break;
+          case 5: valor1_atribuido1 = pontosturisticos1; valor2_atribuido1 = pontosturisticos2; break;
+          case 6: valor1_atribuido1 = superpoder1; valor2_atribuido1 = superpoder2; break;
+          case 7: valor1_atribuido1 = densidadepopulacional1; valor2_atribuido1 = densidadepopulacional2; break;
+       }
+
+ // Segundo anomeatribuido2
+      switch (opcao2) {
+         case 1: valor1_atribuido2 = populacao1; valor2_atribuido2 = populacao2; break;
+         case 2: valor1_atribuido2 = area1; valor2_atribuido2 = area2; break;
+         case 3: valor1_atribuido2 = pib1; valor2_atribuido2 = pib2; break;
+         case 4: valor1_atribuido2 = pibpercapita1; valor2_atribuido2 = pibpercapita2;  break;
+         case 5: valor1_atribuido2 = pontosturisticos1; valor2_atribuido2 = pontosturisticos2;  break;
+         case 6: valor1_atribuido2 = superpoder1; valor2_atribuido2 = superpoder2; break;
+         case 7: valor1_atribuido2 = densidadepopulacional1; valor2_atribuido2 = densidadepopulacional2;  break;
+        }
+
+// Comparção do atributo
+      printf("\n=== Comparação dos Atributos ===\n");
+
+// primeiro atributo
+        if(opcao1 == 7) {
+          printf("%s: %s (%.2f) vs %s (%.2f) -> %s venceu\n", nomeatribuidos[opcao1 - 1], cidade1, valor1_atribuido1, cidade2, valor2_atribuido1, (valor1_atribuido1 < valor2_atribuido1 ? cidade1 : cidade2));
+        } else {
+          printf("%s: %s (%.2f) vs %s (%.2f) -> %s venceu\n", nomeatribuidos[opcao1 - 1], cidade1, valor1_atribuido1, cidade2, valor2_atribuido1, (valor1_atribuido1 > valor2_atribuido1 ? cidade1 : cidade2));
+        }
+
+// Segundo atributo
+         if (opcao2 == 7) {
+          printf("%s: %s (%.2f) vs %s (%.2f) -> %s venceu\n", nomeatribuidos[opcao2 - 1], cidade1, valor1_atribuido2, cidade2, valor2_atribuido2, (valor1_atribuido2 < valor2_atribuido2 ? cidade1 : cidade2));
+         } else {
+          printf("%s: %s (%.2f) vs %s (%.2f) -> %s venceu\n", nomeatribuidos[opcao2 - 1], cidade1, valor1_atribuido2, cidade2, valor2_atribuido2, (valor1_atribuido2 > valor2_atribuido2 ? cidade1 : cidade2));
+         }
+         
+ // Soma final 
+         float soma1 = valor1_atribuido1 + valor1_atribuido2;
+         float soma2 = valor2_atribuido1 + valor2_atribuido2;
+         
+        printf("\n === Resultado Final === \n");
+        printf("\n === Soma dos atributos: %s (%.2f) vs %s (%.2f)\n", cidade1, soma1, cidade2, soma2);         
+        
+        if(soma1 > soma2) {
+          printf("-> %s venceu a rodada!\n", cidade1);
+        } else if (soma2 > soma1) {
+          printf ("-> %s venceu a rodada!\n", cidade2);
+        } else {
+          printf ("-> Empate!\n");
         }
 
          // menu interativo
